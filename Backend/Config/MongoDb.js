@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const DBConnection=async ()=>{
 
     try {
-        await mongoose.connect(process.env.MONGODB_URI);
+        await mongoose.connect("mongodb://localhost:27017/Brideg_DB");
     } catch (error) {
         console.error("[Error] : DB Connection is Failed: ", error.message);
         process.exit(1);
