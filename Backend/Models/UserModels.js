@@ -24,7 +24,14 @@ const UserSchema=new mongoose.Schema({
         type:String
     },
 
-    
+    failedAttempts:{
+        type:Number,
+        default:0
+    },
+
+    lockUntil:{
+       type:Date
+    }
         
     
 },{
