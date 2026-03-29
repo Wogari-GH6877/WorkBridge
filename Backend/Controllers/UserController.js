@@ -165,7 +165,7 @@ export const Login= async(req,res)=>{
 
 export const createJob = async (req, res) => {
   try {
-    // 1. Destructure ALL the new fields from the request body
+    //  Destructure ALL the new fields from the request body
     const { 
       title, 
       description, 
@@ -179,7 +179,7 @@ export const createJob = async (req, res) => {
       applicantsCount 
     } = req.body;
 
-    // 2. Updated Validation (Adding Location and Worktime as required)
+    //  Updated Validation (Adding Location and Worktime as required)
     if (!title || !description || !budget || !location || !worktime) {
       return res.status(400).json({
         success: false,
